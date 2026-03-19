@@ -9,7 +9,7 @@
 / {
     behaviors {
         #include "macros.dtsi"
-      #include "version.dtsi"
+        #include "version.dtsi"
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -57,15 +57,6 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        select_none: select_none {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            label = "SELECT_NONE";
-            wait-ms = <1>;
-            tap-ms = <1>;
-            bindings = <&kp DOWN>, <&kp UP>, <&kp RIGHT>, <&kp LEFT>;
-        };
-
         extend_word: extend_word {
             compatible = "zmk,behavior-mod-morph";
             label = "EXTEND_WORD";
@@ -95,6 +86,15 @@
     };
 
     macros {
+        select_none: select_none {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+            label = "SELECT_NONE";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
         select_line_right: select_line_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -134,37 +134,37 @@
         extend_word_right: extend_word_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            bindings = <&kp LS(LA(RIGHT))>;
             label = "EXTEND_WORD_RIGHT";
             wait-ms = <1>;
             tap-ms = <1>;
-            bindings = <&kp LS(LA(RIGHT))>;
         };
         
         extend_word_left: extend_word_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            bindings = <&kp LS(LA(LEFT))>;
             label = "EXTEND_WORD_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
-            bindings = <&kp LS(LA(LEFT))>;
         };
         
         extend_line_right: extend_line_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            bindings = <&kp LS(DOWN) &kp LS(LG(RIGHT))>;
             label = "EXTEND_LINE_RIGHT";
             wait-ms = <1>;
             tap-ms = <1>;
-            bindings = <&kp LS(DOWN) &kp LS(LG(RIGHT))>;
         };
         
         extend_line_left: extend_line_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+            bindings = <&kp LS(UP) &kp LS(LG(LEFT))>;
             label = "EXTEND_LINE_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
-            bindings = <&kp LS(UP) &kp LS(LG(LEFT))>;
         };
     };
 
