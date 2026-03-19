@@ -42,7 +42,7 @@
         select_word: select_word {
             compatible = "zmk,behavior-mod-morph";
             label = "SELECT_WORD";
-            bindings = <&select_line_right>, <&select_line_left>;
+            bindings = <&select_word_right>, <&select_word_left>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
