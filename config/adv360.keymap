@@ -89,11 +89,11 @@
 
         Cursor {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &none       &none          &none          &none          &none          &none          &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &none       &kp LG(X)      &kp LS(TAB)    &kp LG(Z)      &kp LG(LS(Z))  &kp TAB        &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &none       &kp LG(C)      &kp LEFT       &kp UP         &kp DOWN       &kp RIGHT      &sk LSHFT
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                      &kp LG(V)      &kp LG(LEFT)   &kp PG_UP      &kp PG_DN      &kp LG(RIGHT)  &kp LG(L)
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                     &kp LG(F)      &kp LG(LS(G))  &kp LG(G)      &kp LG(H)      &kp LG(K)
             >;
         };
     };
