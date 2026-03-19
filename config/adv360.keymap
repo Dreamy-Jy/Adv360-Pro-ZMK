@@ -105,6 +105,42 @@
             wait-ms = <1>;
             tap-ms = <1>;
         };
+
+        extend_word_right: extend_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "EXTEND_WORD_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(LA(RIGHT))>;
+        };
+        
+        extend_word_left: extend_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "EXTEND_WORD_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(LA(LEFT))>;
+        };
+        
+        extend_line_right: extend_line_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "EXTEND_LINE_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(DOWN) &kp LS(LG(RIGHT))>;
+        };
+        
+        extend_line_left: extend_line_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "EXTEND_LINE_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp LS(UP) &kp LS(LG(LEFT))>;
+        };
     };
 
     keymap {
