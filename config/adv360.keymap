@@ -63,7 +63,7 @@
             label = "SELECT_NONE";
             wait-ms = <1>;
             tap-ms = <1>;
-            bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+            bindings = <&kp DOWN>, <&kp UP>, <&kp RIGHT>, <&kp LEFT>;
         };
 
         extend_word: extend_word {
