@@ -57,6 +57,31 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        select_none: select_none {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            label = "SELECT_NONE";
+            wait-ms = <1>;
+            tap-ms = <1>;
+            bindings = <&kp DOWN &kp UP &kp RIGHT &kp LEFT>;
+        };
+
+        extend_word: extend_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_WORD";
+            #binding-cells = <0>;
+            bindings = <&extend_word_right>, <&extend_word_left>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        extend_line: extend_line {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXTEND_LINE";
+            #binding-cells = <0>;
+            bindings = <&extend_line_right>, <&extend_line_left>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         thumb: thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "THUMB";
